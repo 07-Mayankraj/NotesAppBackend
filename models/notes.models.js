@@ -7,7 +7,7 @@ const noteSchema = new mongoose.Schema({
   note: {
     type: String,
   },
-  priority: {
+  taskpriority: {
     type: String,
   },
   user : String,
