@@ -13,10 +13,10 @@ const authentication = async(req,res,next)=>{
             req.body.userID = decoded.userID;
             next()
         }else{
-            return res.status(401).json({message:"login first"})
+            return res.status(400).json({message:"login first"})
         }
     } catch (error) {
-        return res.status(401).json({message:error.message})
+        return res.status(500).json({message:error.message})
     }
 }
 
