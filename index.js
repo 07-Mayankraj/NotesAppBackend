@@ -15,7 +15,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // ----------> routes
-app.use("/", (req,res)=>res.json('<h1>Homeroute</h1>'));
+
+app.get("/", (req,res)=>res.send('<h1>Homeroute</h1>'));
+
 app.use("/users", userRoute);
 app.use(authentication);
 app.use("/notes", noteRouter);

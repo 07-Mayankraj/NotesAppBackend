@@ -11,9 +11,9 @@ userRoute.post('/signup',controllers.addUser)
 userRoute.post('/login',controllers.loginFunctionality)
 
 
-userRoute.post('/allusers',authentication,(req,res)=>{
-    res.send('so you were logged in ')
-})
+// userRoute.post('/allusers',authentication,(req,res)=>{
+//     res.send('so you were logged in ')
+// })
 
 
 
