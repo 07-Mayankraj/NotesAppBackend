@@ -9,7 +9,7 @@ const noteSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  category: {
+  priority: {
     type: String,
     required: true,
   },
