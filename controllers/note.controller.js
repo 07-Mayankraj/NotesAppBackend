@@ -10,10 +10,10 @@ exports.homeroute = async (req, res) => {
 };
 
 exports.addnote = async (req, res) => {
-    const { title, note, category } = req.body;
+    const { title, note, priority } = req.body;
     let user = req.body.userID;
     try {
-        const new_note = new NoteModel({ title, note, category, user });
+        const new_note = new NoteModel({ title, note, priority, user });
         await new_note.save();
         res.json({ msg: "created" });
     } catch (err) {
