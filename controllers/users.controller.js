@@ -42,7 +42,10 @@ exports.loginFunctionality = async (req, res) => {
             bcrypt.compare(password, user[0].password, async (err, result) => {
                 if (result) {
                     token = jwt.sign({ userID: user[0]._id }, JWT_SECRET_KEY, { expiresIn: '24h' })
-                    res.send(`message : login success,\n Token : ${token}`)
+                    res.send({
+                        "message" : "login success",
+                         "Token" : `${token}`
+                    })
                 } else {
                     res.send('wrong credntials')
                 }
